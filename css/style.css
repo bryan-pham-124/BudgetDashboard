@@ -1,0 +1,647 @@
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  background-color: #759116;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header h1 {
+  color: white;
+  font-size: 20px;
+}
+
+.header a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 10px 30px !important;
+  padding-right: 0px;
+}
+
+.header a p {
+  display: inline;
+  margin-left: 10px;
+  color: white;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.header a img {
+  height: 20px;
+}
+
+.header a:hover {
+  background-color: #222;
+}
+
+@media only screen and (min-width: 1200px) {
+  .header {
+    padding: 20px 140px;
+  }
+  .header h1 {
+    padding-top: 10px;
+    font-size: 28px;
+  }
+  .header a p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .header {
+    padding: 20px 290px;
+  }
+}
+
+.stats {
+  margin-top: 40px;
+  padding: 0px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.stats .container {
+  margin: 0px;
+  padding: 0px;
+}
+
+.stats h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  display: block;
+  font-size: 40px;
+}
+
+.stats .tile {
+  padding: 25px 30px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  margin-bottom: 60px;
+  border: 1.5px solid #222;
+  width: 250px;
+}
+
+.stats .tile h1 {
+  margin: 40px 0px;
+  font-size: 20px;
+}
+
+.stats .tile .img-row {
+  text-align: center;
+}
+
+.stats .tile .img-row img {
+  height: 60px;
+}
+
+.stats .tile .tile-text {
+  text-align: center;
+}
+
+.stats .tile .tile-text .tile-header {
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.stats .tile .tile-text .tile-num {
+  margin-top: 0px;
+  font-size: 50px;
+}
+
+.stats .tile .tile-text #income-tile, .stats .tile .tile-text #profit-tile {
+  color: #759116;
+}
+
+.stats .tile .tile-text #expenses-tile {
+  color: #BF1029;
+}
+
+@media only screen and (min-width: 800px) {
+  .row {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .row .tile {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .stats .row {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+  }
+}
+
+.transactions {
+  margin: 0px 0px;
+  padding: 0px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.transactions .flex-transactions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.transactions .transaction-row {
+  margin-block: 10px;
+}
+
+.transactions .container {
+  margin: 0px;
+  padding: 0px;
+}
+
+.transactions .trans-header-row {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.transactions .trans-header-row h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  display: inline;
+  font-size: 40px;
+}
+
+.transactions .trans-header-row .filter-entries {
+  background-color: #759116;
+  height: 50px;
+  width: 70px;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.transactions .trans-header-row .filter-entries .dropbtn {
+  width: 160px;
+  background-color: #759116;
+  border: none;
+  color: white;
+  padding: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.transactions .trans-header-row .filter-entries .dropbtn p {
+  display: inline-block;
+}
+
+.transactions .trans-header-row .filter-entries .dropbtn img {
+  margin-left: 15px;
+  height: 30px;
+}
+
+.transactions .trans-header-row .filter-entries .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.transactions .trans-header-row .filter-entries .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.transactions .trans-header-row .filter-entries .dropdown-content img {
+  height: 20px;
+}
+
+.transactions .trans-header-row .filter-entries .dropdown-content a {
+  color: black;
+  padding: 12px 8px;
+  text-decoration: none;
+  display: block;
+}
+
+.transactions .trans-header-row .filter-entries .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.transactions .trans-header-row .filter-entries .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.transactions .trans-header-row .filter-entries .dropdown:hover .dropdown-content a:hover {
+  background-color: #bebebe;
+}
+
+.transactions .trans-header-row .filter-entries .dropdown:hover .dropbtn {
+  background-color: #222;
+}
+
+.transactions #placeholder-text {
+  font-size: 20px;
+  z-index: 300;
+  margin-top: 50px;
+}
+
+.transactions .transaction-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid  #222;
+  margin-top: 0px;
+}
+
+.transactions .transaction-row div {
+  margin-right: 22px;
+  font-size: 15px;
+  display: block;
+  width: 70px;
+  margin-bottom: 0px;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.transactions .transaction-row .amount {
+  font-weight: bold;
+}
+
+.transactions .transaction-row .amount.expense {
+  color: #BF1029;
+}
+
+.transactions .transaction-row .amount.income {
+  color: #759116;
+}
+
+.transactions .transaction-row .exp-or-inc {
+  margin-right: 0px;
+}
+
+.transactions .hide-item {
+  display: none;
+}
+
+.transactions .transaction-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.transactions .transaction-btn-container .transaction-btn {
+  padding: 30px;
+  background-color: #222;
+  color: white;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.transactions .transaction-btn-container .transaction-btn:hover {
+  color: #222;
+  background-color: #759116;
+}
+
+@media only screen and (min-width: 800px) {
+  .transactions {
+    margin-top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .transactions .transaction-row div {
+    font-size: 20px;
+    margin-right: 22px;
+    width: 130px;
+  }
+  .transactions .transaction-row #placeholder-text {
+    margin-top: 30px;
+    font-size: 28px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .transactions .trans-header-row .filter-entries {
+    position: absolute;
+    top: -50px;
+    left: 700px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .transactions .trans-header-row .filter-entries {
+    left: 1050px;
+  }
+  .transactions .transaction-row div {
+    font-size: 20px;
+    margin-right: 50px;
+    width: 190px;
+  }
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.form-container .center-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-container .form {
+  background-color: #759116;
+  padding: 25px;
+  padding-top: 0px;
+  width: 400px;
+}
+
+.form-container .form .close-btn-container {
+  text-align: right;
+}
+
+.form-container .form .close-btn-container .close-btn {
+  margin-top: 20px;
+  font-size: 25px;
+  border: none;
+  background-color: white;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.form-container .form .close-btn-container .close-btn:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.form-container .form .form-header {
+  text-align: center;
+}
+
+.form-container .form .form-header h1 {
+  background-color: #222;
+  font-size: 40px;
+  color: white;
+  padding: 30px;
+}
+
+.form-container .form .form-control {
+  margin-bottom: 10px;
+}
+
+.form-container .form .form-control label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.form-container .form .form-control input {
+  width: 95%;
+  height: 30px;
+  font-size: 22px;
+  padding-left: 15px;
+  border: 2px solid #222;
+}
+
+.form-container .form .form-control small {
+  margin-top: 5px;
+  color: #414141;
+  display: none;
+  font-weight: bold;
+}
+
+.form-container .form .form-control.error small {
+  display: block;
+}
+
+.form-container .form .btn-container {
+  text-align: center;
+}
+
+.form-container .form .btn-container button {
+  padding: 20px 40px;
+  font-size: 18px;
+  background-color: #222;
+  color: white;
+  text-decoration: none;
+  border: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.form-container .form .btn-container button:hover {
+  background-color: white;
+  color: #222;
+}
+
+.form-container.visible {
+  display: block;
+}
+
+.chart-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chart-container canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 60vw;
+}
+
+.hide-sample {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.hide-sample .sample-button {
+  width: 300px;
+  padding: 30px;
+  background-color: #BF1029;
+  color: white;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.hide-sample .sample-button:hover {
+  background-color: #222;
+}
+
+.hide-sample .sample-button.hide {
+  display: none;
+}
+
+/* The Modal (background) */
+.user-guide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 100px;
+}
+
+#myBtn {
+  padding: 15px 30px;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #222;
+  width: 80%;
+}
+
+.modal-content h1 {
+  color: white;
+  background-color: #759116;
+  padding: 20px;
+}
+
+.modal-content span {
+  font-weight: bold;
+  color: #759116;
+}
+
+.modal-content p {
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
