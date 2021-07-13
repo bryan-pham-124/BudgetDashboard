@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+    crossorigin="anonymous"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.min.js" integrity="sha512-JxJpoAvmomz0MbIgw9mx+zZJLEvC6hIgQ6NcpFhVmbK1Uh5WynnRTTSGv3BTZMNBpPbocmdSJfldgV5lVnPtIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <div class="header">
+        <h1>PROFIT DASHBOARD</h1>
+        <a href="#"  id = "transactionBtn">
+            <img src="img/plus-new.png" alt="plus_by_FreePik">
+            <p> Add new transaction   </p>
+        </a>
+    </div> <!-- header end-->
+
+ 
+    <div class="hide-sample" id="hide-sample">
+        <div class="sample-button" id = 'sample-button'>
+           Hide Sample Data
+        </div>
+    </div>
+
+
+    <div class="stats">
+        <div class="container">
+            <h1>Important Stats</h1>
+            <div class="row">
+
+                <div class="tile">
+                    <div class="mini-container">
+                        <div class="img-row">
+                            <img src="img/money.png" alt="money_by_Photo3idea">
+                            <img src="img/up-arrow (1).png" alt="up_arrow_by_FreePik">
+                        </div>
+                        <div class="tile-text">
+                            <p class = "tile-header">Total Income</p>
+                             <p id ="income-tile" class ="tile-num"> $0 </p>
+                        </div>
+                    </div>
+                </div> <!-- tile end-->
+
+                <div class="tile">
+                    <div class="mini-container">
+                        <div class="img-row">
+                            <img src="img/money.png" alt="money_by_Photo3idea">
+                            <img src="img/down-arrow.png" alt="up_arrow_by_FreePik">
+                        </div>
+                        <div class="tile-text">
+                            <p class = "tile-header">Total Expenses</p>
+                             <p id ="expenses-tile" class ="tile-num"> $0 </p>
+                        </div>
+                    </div>
+                </div> <!-- tile end-->
+
+                <div class="tile">
+                    <div class="mini-container">
+                        <div class="img-row">
+                            <img src="img/profit.png" alt="money_by_Photo3idea">
+                        </div>
+                        <div class="tile-text">
+                            <p class = "tile-header">Total Profit</p>
+                             <p id ="profit-tile" class ="tile-num"> $0 </p>
+                        </div>
+                    </div>
+                </div> <!-- tile end-->
+
+            </div> <!-- row end-->
+        </div> <!-- container end-->
+    </div> <!--stat end-->
+
+
+
+    <div class="chart-container">
+        <canvas id= "myChart"></canvas>
+    </div>
+
+    <!-- transaction section  -->
+    <div class="transactions">
+        <div class="container" id ="transaction-container">
+            <div class = "trans-header-row">
+                <h1>Transaction History</h1>
+                <div id = "filter-entries" class = "filter-entries"> 
+                    <!-- drop down provided by W3C schools-->
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <p> Sort </p>     
+                            <img src="img/filter.png" alt="filter-FreePik">
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#" id = "Date-Asc">Date  <img src="img/up-arrow (1).png" alt="up_arrow_by_FreePik"></a>
+                            <a href="#" id = "Date-Desc" >Date <img src="img/down-arrow.png" alt="down_arrow_by_FreePik"> </a>
+                            <a href="#" id = "Amount-Asc">Amount <img src="img/up-arrow (1).png" alt="up_arrow_by_FreePik"> </a>
+                            <a href="#" id = "Amount-Desc">Amount <img src="img/down-arrow.png" alt="down_arrow_by_FreePik"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="transaction-row"  >
+                <div class="name">Name</div>
+                <div class="transaction-type"> Category </div>
+                <div class="date">Date</div>
+                <div class="amount">  Amount</div>
+                <div class="exp-or-inc">Exp or Inc </div>
+            </div>
+
+
+            <div class="flex-transactions">
+                <!--
+                <div class="transaction-row" id= "transaction-row">
+                    <div class="name">JOe</div>
+                    <div class="transaction-type"> Sales </div>
+                    <div class="date">1/1/1911</div>
+                    <div class="amount">  $300</div>
+                    <div class="exp-or-inc">  EXPense </div>
+                </div>
+
+
+                <div class="transaction-row" id= "transaction-row">
+                    <div class="name">JOe</div>
+                    <div class="transaction-type"> Sales </div>
+                    <div class="date">1/1/2021</div>
+                    <div class="amount">  $100</div>
+                    <div class="exp-or-inc">  income </div>
+                </div>
+                 
+                <div class="transaction-row" id= "transaction-row">
+                    <div class="name">JOe</div>
+                    <div class="transaction-type"> Sales </div>
+                    <div class="date">1/1/2021</div>
+                    <div class="amount">  $200</div>
+                    <div class="exp-or-inc">  income </div>
+                </div>
+                
+                <div class="transaction-row" id= "transaction-row">
+                    <div class="name">JOe</div>
+                    <div class="transaction-type"> Sales </div>
+                    <div class="date">1/1/2021</div>
+                    <div class="amount">  $200</div>
+                    <div class="exp-or-inc">  EXPense </div>
+                </div>
+
+                <div class="transaction-row" id= "transaction-row">
+                    <div class="name">JOe</div>
+                    <div class="transaction-type"> Sales </div>
+                    <div class="date">1/1/2021</div>
+                    <div class="amount">  $300</div>
+                    <div class="exp-or-inc">  EXPense </div>
+                </div>
+
+            -->
+                
+            </div> <!-- flex transitions end-->
+            
+            <div class="transaction-btn-container">
+                <div class="transaction-btn" id = 'transaction-btn'>
+                    Show more entries 
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- transaction section end-->
+
+
+    <div class="form-container" id ="form-container">
+
+        <div class="center-form" id ="center-form">
+
+            <form  id="form" class="form">
+            
+                <div class="close-btn-container">
+                    <button class="close-btn" id="form-close-btn">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+             
+                <div class="form-header">
+                    <h1>Enter a new transaction</h1>
+                     
+                </div>
+    
+                <!-- Delete username in final version-->
+    
+                <div id = "first-control" class="form-control">
+                    <label for="username">Username (Max 15 characters)</label>
+                    <input type="text"  placeholder="ex: John doe"
+                    id="form-name"  >
+                    <small>Error Message</small>
+                </div>
+    
+                <div class="form-control">
+                    <label for="form-trans-type">Transaction type</label>
+                    <input type="text"   placeholder="ex: Rent" id= "form-trans-type" >
+                    <small>Error Message</small>
+                </div>
+    
+                <div class="form-control">
+                    <label for="form-date"> Date </label>
+                    <input type="text" placeholder="ex: DD/MM/YYYY" id= "form-date">
+                    <small>Error Message</small>
+                </div>
+     
+                <div class="form-control">
+                    <label for="form-amount">Amount in USD</label>
+                    <input type="text" placeholder="ex: 1738"  id= "form-amount" >
+                    <small>Error Message</small>
+                </div>
+    
+                <div class="form-control">
+                    <label for="form-income">Income or Expense</label>
+                    <input type="text" placeholder="ex: Income" id= "form-income-expense" >
+                    <small>Error Message</small>
+                </div>
+                
+                <div class="btn-container">
+                    <button id ="form-btn" type = "submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        
+     </div>
+
+
+     <div class="user-guide">
+ 
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Welcome!</h1>
+
+            <p>This dynamic app keeps track of a business' incomes, expense and profit.</p> 
+
+            <p>To enter new data, click on <span>"Add new transaction"   </span>on the top-left corner of the screen and fill out the form.</p>
+
+            <p>The new data entries will be displayed in the  <span> 'Transaction History'  </span>section and the chart will be updated.</p>
+
+            <p>This app has been filled with random data to show what this app is capable of.</p>
+
+            <p>
+              You can also clear the sample data and entire your own data.
+            </p>
+
+        </div>
+
+        </div>  
+     </div>
+
+    
+     <script src="scripts/w3-modal-scripts.js"></script>
+
+    <script src="scripts/form-script.js"></script>
+
+    <script src="scripts/sort-script.js"></script>
+
+    <script src="scripts/form-validation.js"> </script>
+    
+    <script src="scripts/transaction-scripts.js"></script>
+
+    <script src="scripts/dashboard-scripts.js"></script>
+    
+    <script src="scripts/dashboard-charts.js"></script>
+
+    <script src="scripts/init.js">
+
+
+    </script>
+
+</body>
+</html>
