@@ -275,6 +275,7 @@ body {
   padding: 12px 8px;
   text-decoration: none;
   display: block;
+  font-size: 15px;
 }
 
 .transactions .trans-header-row .filter-entries .dropdown-content a:hover {

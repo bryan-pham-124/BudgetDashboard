@@ -143,7 +143,7 @@ function getData(elm){
     
 }
 
-console.log(getData('profit'));
+//console.log(getData('profit'));
 var chart = document.getElementById('myChart').getContext('2d');
  
 

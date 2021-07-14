@@ -25,8 +25,13 @@ function createTransaction(usernameP, transTypeP, dateP, amountP, incP){
                 cleanValue === "income"? 'income': 'expense'
             );
 
+            if(cleanValue === 'expense'){
+                transEntry.innerHTML = `-$${elm.value}`;
+            } else {
+                transEntry.innerHTML = `$${elm.value}`;
+            }
            
-            transEntry.innerHTML = `$${elm.value}`;
+            
         } else {
 
             transEntry.innerHTML = `${elm.value}`;

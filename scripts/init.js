@@ -13,8 +13,8 @@ function randomData(min, max) {
 
 function generateSampleData(){
     
-    let rEntryAmt = randomData(1,7);
-    console.log(rEntryAmt);
+    let rEntryAmt = randomData(1,8);
+    //console.log(rEntryAmt);
     let rCategories = ['Sales', 'Rent', 'Production Cost', 'Advertising'];
     let rNames = ['Camden', 'Alanis', 'Bob', 'John', 'Joe', 'Alex', 'V'];
  
@@ -36,10 +36,10 @@ function generateSampleData(){
 
 
         createTransaction({value:  rNames[randomData(0, rNames.length-1)] }, {value: rCategory}, {value: rDate}, {value: rIncome}, {value: 'income'});
-        addChartData(myChart );
+        addChartData(myChart);
 
         createTransaction({value:  rNames[randomData(0, rNames.length-1)] }, {value: rCategory}, {value: rDate}, {value: rExpense}, {value: 'expense'})
-        addChartData(myChart );
+        addChartData(myChart);
     }
     
 
@@ -51,7 +51,7 @@ generateSampleData();
 hideTransactions();
 
 let entryCount = document.getElementsByClassName('transaction-row').length - 1;
-console.log('ec ' + (entryCount));
+//console.log('ec ' + (entryCount));
 
 if(entryCount < 6){
     showMore.style.display = 'none';
@@ -61,7 +61,7 @@ if(entryCount < 6){
 // all code below is adding listeners to all page elements
 
 window.addEventListener('load', function(e){
-    console.log('Page is loaded');
+   // console.log('Page is loaded');
     modal.style.display = "block";
 
 })
