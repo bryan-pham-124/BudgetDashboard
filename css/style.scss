@@ -162,8 +162,6 @@ body {
 @media only screen and (min-width: 1200px) {
     .stats {
 
-      
-
         .row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -318,10 +316,10 @@ body {
         border-bottom: 1px solid  #222;
         margin-top: 0px;
         div {
-            margin-right: 22px;
-            font-size: 15px;
+            margin-right: 10px;
+            font-size: 13px;
             display: block;
-            width: 70px;
+            width: 60px;
             margin-bottom: 0px; 
             word-wrap: break-word;
             hyphens: auto;
