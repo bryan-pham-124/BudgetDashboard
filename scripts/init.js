@@ -91,6 +91,9 @@ inc.addEventListener('blur', function(e){
  
  
 btn.addEventListener('click', function(e) {
+  
+     e.preventDefault();
+ 
     const validForm = validateForm();
     if(validForm){
         formContainer.classList.remove("visible");
