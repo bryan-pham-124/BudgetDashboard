@@ -309,17 +309,17 @@ body {
           justify-content: center;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
   border-bottom: 1px solid  #222;
   margin-top: 0px;
 }
 
 .transactions .transaction-row div {
-  margin-right: 10px;
-  font-size: 13px;
+  margin-right: 5px;
+  font-size: 11px;
   display: block;
-  width: 60px;
+  width: 50px;
   margin-bottom: 0px;
   word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -441,7 +441,7 @@ body {
 
 .form-container .form .close-btn-container .close-btn {
   margin-top: 20px;
-  font-size: 25px;
+  font-size: 15px;
   border: none;
   background-color: white;
   -webkit-transition: .5s;
@@ -459,17 +459,17 @@ body {
 
 .form-container .form .form-header h1 {
   background-color: #222;
-  font-size: 40px;
+  font-size: 30px;
   color: white;
   padding: 30px;
 }
 
 .form-container .form .form-control {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .form-container .form .form-control label {
-  font-size: 18px;
+  font-size: 15px;
   display: block;
   margin-bottom: 10px;
   color: white;
@@ -619,6 +619,7 @@ body {
   color: white;
   background-color: #759116;
   padding: 20px;
+  margin-top: 35px;
 }
 
 .modal-content span {
@@ -633,7 +634,7 @@ body {
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: black !important;
   float: right;
   font-size: 28px;
   font-weight: bold;
