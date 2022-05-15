@@ -13,7 +13,8 @@ transactionBtn.addEventListener('click', () => {
 });
 
 //close form menu
-closeBtn.addEventListener('click', () => {
+closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     formContainer.classList.remove("visible");
 });
 
